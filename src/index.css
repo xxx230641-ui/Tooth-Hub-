@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+:root {
+  --th-navy: #0f2942;
+  --th-navy-deep: #091b2c;
+  --th-teal: #2a9d98;
+  --th-teal-bright: #3bb2ac;
+  --th-teal-soft: #eef7f6;
+  --th-surface: #f4f7f8;
+  --th-surface-muted: #ebeff1;
+  --th-ink: #0f2942;
+  --th-ink-muted: #4a6073;
+  --th-border: #dce4ea;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  html[dir='rtl'] {
+    font-family: 'IBM Plex Sans Arabic', 'Plus Jakarta Sans', -apple-system, sans-serif;
+  }
+
+  h1, h2, .font-display {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  html[dir='rtl'] h1,
+  html[dir='rtl'] h2,
+  html[dir='rtl'] .font-display {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
